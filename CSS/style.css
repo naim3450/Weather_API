@@ -1,0 +1,194 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #fff98e;
+}
+
+.container {
+    color: #000;
+    width: 80%;
+    margin: auto;
+    background: rgb(255, 255, 255);
+    margin-top: 20px;
+    padding: 30px 20px;
+    border-radius: 20px;
+    transition: .5s;
+}
+
+.container2 {
+    color: #fff;
+    width: 80%;
+    margin: auto;
+    background: rgb(31, 31, 31);
+    margin-top: 20px;
+    padding: 30px 20px;
+    border-radius: 20px;
+    transition: .9s;
+}
+
+
+.weather_search {
+    position: relative;
+}
+
+.weather_search i {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    color: #fff;
+}
+
+input {
+    background: rgb(63, 63, 63);
+    padding: 1rem 2.5rem;
+    outline: none;
+    border: none;
+    border-radius: 8px;
+    width: 300px;
+    color: #fff;
+}
+
+input::placeholder {
+    color: #fff;
+    font-size: 16px;
+}
+
+.weather_body {
+    text-align: center;
+}
+
+.weather_date_time {
+    margin: 15px 0;
+}
+
+.weather_forecast {
+    padding: 10px 5px;
+    background: #fff;
+    margin: auto;
+    border-radius: 20px;
+    font-weight: 600;
+    width: 120px;
+    color: #000;
+    box-shadow: inset 2px 2px 8px rgba(0, 0, 0, 0.675);
+    margin-top: 10px;
+}
+
+.weather_icon {
+    font-size: 30px;
+    margin-top: 30px;
+}
+
+.weather_tempeature {
+    font-size: 36px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.weather_mainmax {
+    display: flex;
+    justify-content: space-between;
+    width: 150px;
+    margin: auto;
+}
+
+.weather_info {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 15px;
+    margin-top: 50px;
+}
+
+.weather_card {
+    /* width: 50%; */
+    padding: 10px 10px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.427);
+    border-radius: 10px;
+    display: flex;
+    font-size: 20px;
+    font-family: serif;
+}
+
+
+
+/* dark mood */
+/* .................................... */
+label {
+    width: 190px;
+    height: 75px;
+    position: relative;
+    display: block;
+    background: rgb(86, 213, 255);
+    border-radius: 200px;
+    box-shadow: inset 0 5px 10px rgb(0, 0, 0, 0.4), inset 0px -5px 10px rgba(255, 255, 255, 0.4);
+    transition: .4s;
+    border: 1px solid rgb(86, 213, 255);
+}
+
+label::after {
+    position: absolute;
+    content: "";
+    height: 55px;
+    width: 55px;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    background: linear-gradient(180deg, #fdb04b, #ff9c07);
+    box-shadow: 0 5px 15px rgb(0, 0, 0, 0.2);
+    border-radius: 50%;
+    transition: .9s;
+}
+
+#dark_mood {
+    display: none;
+    width: 0px;
+    height: 0px;
+}
+
+#dark_mood:checked+label {
+    background-color: #424242;
+    border: 1px solid #424242;
+    transition: .5s;
+    box-shadow: inset 0 5px 10px rgba(0, 0, 0, 0.749), inset 0px -5px 10px rgba(30, 29, 29, 0.652);
+}
+
+#dark_mood:checked+label::after {
+    left: 129px;
+    transform: translateX(-80%);
+    transform: translateY(-50%);
+    background: linear-gradient(180deg, #777, #3a3a3a);
+}
+
+label i {
+    position: absolute;
+    font-size: 40px;
+    z-index: 100;
+}
+
+label .sun {
+    color: rgba(255, 255, 255, 0.837);
+    top: 50%;
+    transform: translateY(-50%);
+    left: 12px;
+}
+
+#dark_mood:checked+label .sun {
+    color: gray;
+    transition: .5s;
+}
+
+label .moon {
+    color: gray;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 145px;
+}
+
+#dark_mood:checked+label .moon {
+    color: rgba(253, 253, 253, 0.837);
+    transition: .5s;
+}

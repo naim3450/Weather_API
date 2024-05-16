@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+</head>
+
+<body>
+    <div style="margin-left: 1500px; margin-top: 20px; ">
+        <input style="outline: none;" type="checkbox" id="dark_mood">
+        <label style="outline: none;" for="dark_mood">
+            <i class="sun fa-regular fa-sun"></i>
+            <i class="moon fa-regular fa-moon"></i>
+        </label>
+    </div>
+    
+    <section class="container">
+        <!-- Input Search  Fild Start -->
+        <div class="weather_header">
+            <form class="weather_search">
+                <input type="text" placeholder="Search city" class="city_name">
+                <i id="submit" class="fa-solid fa-magnifying-glass"></i>
+            </form>
+        </div>
+        <!-- Input Search  Fild End -->
+
+        <!-- Weather main data Start -->
+        <div class="weather_body">
+            <h1 class="weather_city"></h1>
+            <p class="weather_date_time"></p>
+            <!-- For weather Icon part -->
+            <div class="weather_data">
+                <p class="weather_forecast"></p>
+                <div class="weather_icon"></i></div>
+            </div>
+
+            <!-- For weather tempeature part  -->
+            <p class="weather_tempeature"></p>
+            <div class="weather_mainmax">
+                <p class="weather_main"></p>
+                <p class="weather_max" style="margin-left: 10px;"></p>
+            </div>
+        </div>
+        <!-- Weather main data End -->
+
+        <!-- Weather ext data Start -->
+        <section class="weather_info">
+            <!-- 1st -->
+            <div class="weather_card">
+                <i class="fa-solid fa-droplet"></i>
+                <div style="margin-left: 15px;">
+                    <p>Feels like</p>
+                    <p class="weather_FeelsLike"></p>
+                </div>
+            </div>
+
+            <!-- 2nd -->
+            <div class="weather_card">
+                <i class="fa-solid fa-droplet"></i>
+                <div style="margin-left: 15px;">
+                    <p>Humidity</p>
+                    <p class="weather_Humidity"></p>
+                </div>
+            </div>
+
+            <!-- 3rd -->
+            <div class="weather_card">
+                <i class="fa-solid fa-wind"></i>
+                <div style="margin-left: 15px;">
+                    <p>Wind</p>
+                    <p class="weather_Wind"></p>
+                </div>
+            </div>
+
+            <!-- 3rd -->
+            <div class="weather_card">
+                <i class="fa-solid fa-gauge"></i>
+                <div style="margin-left: 15px;">
+                    <p>Pressure</p>
+                    <p class="weather_Pressure"></p>
+                </div>
+            </div>
+        </section>
+        <!-- Weather ext data End -->
+
+    </section>
+    <script src="JS/script.js"></script>
+</body>
+
+</html>
